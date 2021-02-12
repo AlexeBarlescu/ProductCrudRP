@@ -1,4 +1,5 @@
-﻿using ProductCrudRP.Core.DataInterface;
+﻿using Microsoft.EntityFrameworkCore;
+using ProductCrudRP.Core.DataInterface;
 using ProductCrudRP.Core.Domain;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace ProductCrudRP.DataAccess.Repositories
 
         public IEnumerable<Product> GetAll()
         {
-            return _context.Products.ToList();
+            return _context.Products.Include(p => p.Category).ToList();
         }
 
         public void Add(Product product)

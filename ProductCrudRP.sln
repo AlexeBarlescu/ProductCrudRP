@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCrudRP.DataAccess", "ProductCrudRP.DataAccess\ProductCrudRP.DataAccess.csproj", "{02F56D3E-A79C-43DF-8546-7DE1B84CFA10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCrudRP.DataAccess", "ProductCrudRP.DataAccess\ProductCrudRP.DataAccess.csproj", "{02F56D3E-A79C-43DF-8546-7DE1B84CFA10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCrudRP.Core", "ProductCrudRP.Core\ProductCrudRP.Core.csproj", "{56ABCACF-EAE7-49C9-B7DD-6D4EC40DFEDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCrudRP.Core", "ProductCrudRP.Core\ProductCrudRP.Core.csproj", "{56ABCACF-EAE7-49C9-B7DD-6D4EC40DFEDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCrudRP.Web", "ProductCrudRP.Web\ProductCrudRP.Web.csproj", "{B0C76490-2416-45FA-8118-C0F213198211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCrudRP.Web", "ProductCrudRP.Web\ProductCrudRP.Web.csproj", "{B0C76490-2416-45FA-8118-C0F213198211}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{02F56D3E-A79C-43DF-8546-7DE1B84CFA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +55,11 @@ Global
 		{B0C76490-2416-45FA-8118-C0F213198211}.Release|x64.Build.0 = Release|Any CPU
 		{B0C76490-2416-45FA-8118-C0F213198211}.Release|x86.ActiveCfg = Release|Any CPU
 		{B0C76490-2416-45FA-8118-C0F213198211}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1082652-136D-4BA4-94A8-19EE46DB646E}
 	EndGlobalSection
 EndGlobal
