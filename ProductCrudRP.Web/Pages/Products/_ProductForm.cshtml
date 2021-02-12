@@ -1,0 +1,32 @@
+﻿@model ProductFormViewModel
+
+<form asp-page="@Model.Action" method="post">
+    <div class="bg-primary text-white text-center p-2">@Model.Action.ToUpper()</div>
+
+    <div class="form-group">
+        <label>Product Id</label>
+        <input asp-for="Product.Id" disabled class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Name"></label>
+        <input asp-for="Product.Name" disabled="@Model.ReadOnly" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Price"></label>
+        <input asp-for="Product.Price" disabled="@Model.ReadOnly" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.CategoryId"></label>
+        <select asp-for="Product.CategoryId" disabled="@Model.ReadOnly" class="form-control"
+                asp-items="@(new SelectList(Model.Categories, "Id","Name"))">
+            <option value="" disabled selected></option>
+        </select>
+    </div>
+    <div class="form-group">
+        @if(!Model.ReadOnly || Model.Action == "Delete")
+        {
+            <button class="btn btn-@Model.Theme" type="submit">@Model.Action</button>
+        }
+        <a asp-page="/Index" class="btn btn-secondary">Back</a>
+    </div>
+</form>

@@ -9,5 +9,6 @@ namespace ProductCrudRP.Core.DataInterface
         void Add(Product product);
         void Edit(Product product);
         void Delete(Product product);
+        Product Get(int id);
     }
 }

@@ -20,6 +20,11 @@ namespace ProductCrudRP.DataAccess.Repositories
             return _context.Products.Include(p => p.Category).ToList();
         }
 
+        public Product Get(int id)
+        {
+            return _context.Products.Find(id);
+        }
+
         public void Add(Product product)
         {
             _context.Products.Add(product);
@@ -38,5 +43,6 @@ namespace ProductCrudRP.DataAccess.Repositories
             _context.SaveChanges();
         }
 
+        
     }
 }
