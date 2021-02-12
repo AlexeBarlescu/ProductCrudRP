@@ -1,8 +1,9 @@
-﻿using ProductCrudRP.Core.Domain;
+﻿using ProductCrudRP.Core.DataInterface;
+using ProductCrudRP.Core.Domain;
 
 namespace ProductCrudRP.DataAccess.Repositories
 {
-    public class CategoryRepository
+    public class CategoryRepository: ICategoryRepository
     {
         private readonly ProductCrudRPContext _context;
 
