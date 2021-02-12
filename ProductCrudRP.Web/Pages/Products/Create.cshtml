@@ -1,0 +1,7 @@
+﻿@page "/products/new"
+@model Products.CreateModel
+@{ 
+    ViewData["title"] = "Create Product";
+}
+
+<partial name="_ProductForm" model="@Model.ProducFormViewModel"/>

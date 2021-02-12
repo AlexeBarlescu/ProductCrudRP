@@ -1,31 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using ProductCrudRP.Core.DataInterface;
+﻿using ProductCrudRP.Core.DataInterface;
 using ProductCrudRP.Core.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProductCrudRP.Web.Pages.Products
 {
-    public class DetailsModel: PageModel
+    public class DetailsModel : ProductPageModel
     {
-        private readonly IProductRepository _productRepository;
-        private readonly ICategoryRepository _categoryRepository;
-
-        public DetailsModel(IProductRepository productRepository, ICategoryRepository categoryRepository)
-        {
-            _productRepository = productRepository;
-            _categoryRepository = categoryRepository;
-        }
-
-        public ProductFormViewModel ProducFormViewModel { get; set; }
+        public DetailsModel(IProductRepository prodRepo, ICategoryRepository catRepo) : base(prodRepo, catRepo) { }
 
         public void OnGet(int id)
         {
             Product p = _productRepository.Get(id);
-            ProducFormViewModel = ProductFormViewModelFactory.Details(p, _categoryRepository.GetAll());
+            ProducFormViewModel = ProductFormViewModelFactory.Details(p, Categories);
         }
     }
 }

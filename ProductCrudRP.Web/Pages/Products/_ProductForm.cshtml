@@ -1,12 +1,16 @@
 ﻿@model ProductFormViewModel
 
 <form asp-page="@Model.Action" method="post">
-    <div class="bg-primary text-white text-center p-2">@Model.Action.ToUpper()</div>
+    <div class="bg-primary text-white text-center p-2 mb-2">@Model.Action.ToUpper()</div>
 
-    <div class="form-group">
-        <label>Product Id</label>
-        <input asp-for="Product.Id" disabled class="form-control"/>
-    </div>
+    @if(Model.Action != "Create")
+    {
+        <div class="form-group">
+            <label>Product Id</label>
+            <input asp-for="Product.Id" disabled class="form-control"/>
+        </div>
+    }
+
     <div class="form-group">
         <label asp-for="Product.Name"></label>
         <input asp-for="Product.Name" disabled="@Model.ReadOnly" class="form-control"/>

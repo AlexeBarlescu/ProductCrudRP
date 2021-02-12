@@ -16,5 +16,17 @@ namespace ProductCrudRP.Web.Pages.Products
                 Categories = categories
             };
         }
+        public static ProductFormViewModel Create(Product product, IEnumerable<Category> categories)
+        {
+            return new ProductFormViewModel
+            {
+                Product = product,
+                Action = "Create",
+                Theme = "primary",
+                ReadOnly = false,
+                Categories = categories
+            };
+        }
+
     }
 }
