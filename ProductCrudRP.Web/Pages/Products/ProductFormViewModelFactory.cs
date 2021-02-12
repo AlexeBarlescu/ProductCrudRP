@@ -27,6 +27,27 @@ namespace ProductCrudRP.Web.Pages.Products
                 Categories = categories
             };
         }
-
+        public static ProductFormViewModel Edit(Product product, IEnumerable<Category> categories)
+        {
+            return new ProductFormViewModel
+            {
+                Product = product,
+                Action = "Edit",
+                Theme = "warning",
+                ReadOnly = false,
+                Categories = categories
+            };
+        }
+        public static ProductFormViewModel Delete(Product product, IEnumerable<Category> categories)
+        {
+            return new ProductFormViewModel
+            {
+                Product = product,
+                Action = "Delete",
+                Theme = "danger",
+                ReadOnly = true,
+                Categories = categories
+            };
+        }
     }
 }

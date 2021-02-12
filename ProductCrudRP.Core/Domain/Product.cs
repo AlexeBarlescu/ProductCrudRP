@@ -9,7 +9,7 @@ namespace ProductCrudRP.Core.Domain
         public int Id { get; set; }
 
         [DisplayName("Product Name")]
-        [Required(ErrorMessage = "Tell us your name")]
+        [Required(ErrorMessage = "Enter the product name")]
         public string Name { get; set; }
 
         [DisplayName("Product Price")]

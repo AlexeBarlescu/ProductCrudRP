@@ -1,0 +1,7 @@
+﻿@page "/products/delete/{id}"
+@model Products.DeleteModel
+@{
+    ViewData["title"] = "Delete Product";
+}
+
+<partial name="_ProductForm" model="@Model.ProducFormViewModel" />

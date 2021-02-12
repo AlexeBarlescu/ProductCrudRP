@@ -1,0 +1,11 @@
+﻿@page "/products/edit/{id}"
+@model Products.EditModel
+@{
+    ViewData["title"] = "Edit Product";
+}
+
+<partial name="_ProductForm" model="@Model.ProducFormViewModel" />
+
+@section Scripts {
+    <partial name="_ValidationScripts" />
+}
