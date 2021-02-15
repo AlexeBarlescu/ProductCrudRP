@@ -1,21 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProductCrudRP.Core.DataInterface;
 using ProductCrudRP.Core.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace ProductCrudRP.Web.Pages.Products
 {
-    public class EditModel: ProductPageModel
+    public class EditModel : ProductPageModel
     {
         public EditModel(IProductRepository prodRepo, ICategoryRepository catRepo) : base(prodRepo, catRepo) { }
 
         public void OnGet(int id)
         {
-            Product p = _productRepository.Get(id);
+            Product p = TempData.ContainsKey("product")
+                        ? JsonSerializer.Deserialize<Product>(TempData["product"] as string)
+                        : _productRepository.Get(id);
+
             ProducFormViewModel = ProductFormViewModelFactory.Edit(p, Categories);
         }
 

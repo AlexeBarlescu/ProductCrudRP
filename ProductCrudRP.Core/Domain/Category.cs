@@ -10,6 +10,8 @@ namespace ProductCrudRP.Core.Domain
 
         [DisplayName("Category Name")]
         [Required(ErrorMessage = "Enter the category name")]
+        [MaxLength(30)]
+        [MinLength(3)]
         public string Name { get; set; }
 
         public IEnumerable<Product> Products { get; set; }

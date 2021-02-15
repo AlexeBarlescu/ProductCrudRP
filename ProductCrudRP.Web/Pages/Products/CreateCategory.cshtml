@@ -1,0 +1,22 @@
+﻿@page "/categories/new"
+@model CategoryModel
+@{
+    ViewData["title"] = "Create Category";
+}
+
+<form asp-page="CreateCategory" method="post">
+
+    <div class="bg-primary text-white text-center p-2 mb-2">Create Category</div>
+
+    <div class="form-group">
+        <label asp-for="Category.Name"></label>
+        <input asp-for="Category.Name" class="form-control" />
+        <span asp-validation-for="Category.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-page="@Model.ReturnPage" asp-route-id="@Model.ProductId" class="btn btn-secondary">Back</a>
+    </div>
+
+</form>
