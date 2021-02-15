@@ -14,7 +14,6 @@ This class library contains the database context and the implememntations of the
 ### __ProductCrudRP.Web__   - The presentation tier
 RazorPages application that configures EntityFramework to use Sqlite with an in memory database.
 
-##Images
 
 ![alt text](index.png "Logo Title Text 1")
 ![alt text](create.png "Logo Title Text 1")
